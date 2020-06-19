@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Kakao_Page_Downloader
 {
@@ -20,11 +16,28 @@ namespace Kakao_Page_Downloader
     {
         public List<File> Files { get; set; }
         public string SAtsServerUrl { get; set; }
+        public int TotalCount { get; set; }
     }
 
     public partial class File
     {
         public string SecureUrl { get; set; }
+        public int No { get; set; }
     }
 
+    public partial class Manga
+    {
+        public List<Chapter> Singles { get; set; }
+        public int Total_Count { get; set; }
+    }
+
+    public partial class Chapter
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public int Page_Count { get; set; }
+
+        public List<File> Files { get; set; }
+    }
+    
 }
